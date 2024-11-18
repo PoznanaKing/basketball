@@ -71,5 +71,20 @@ namespace BASSKETBALL.Controllers
                 return NotFound();
             }
         }
+        [HttpDelete]
+        public ActionResult<Matchdatum> Delete(Guid id)
+        {
+            using (var context = new BasketteamContext())
+            {
+                var deletingData= context.Matchdata.FirstOrDefault(x=>x.Id == id);
+                if (deletingData!=null)
+                {
+                    context.Remove(deletingData);
+                    context.SaveChanges();
+                    return StatusCode(200, new {message="Sikeres törlés"});
+                }
+                return BadRequest(new {message="sikertelen törlés"});
+            }
+        }
     }
 }

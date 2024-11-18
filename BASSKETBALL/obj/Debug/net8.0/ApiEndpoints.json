@@ -176,6 +176,32 @@
   },
   {
     "ContainingType": "BASSKETBALL.Controllers.datasController",
+    "Method": "Delete",
+    "RelativePath": "Matchdatum",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BASSKETBALL.Models.Matchdatum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BASSKETBALL.Controllers.datasController",
     "Method": "Get",
     "RelativePath": "Matchdatum/{id}",
     "HttpMethod": "GET",
